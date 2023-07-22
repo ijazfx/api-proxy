@@ -1,3 +1,17 @@
+# Eclipse
+.classpath
+.factorypath
+.project
+.settings/
+
+# Vaadin
+node_modules/
+package-lock.json
+
+# Binaries
+bin/
+target/
+
 # Compiled class file
 *.class
 
