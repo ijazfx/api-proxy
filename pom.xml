@@ -1,13 +1,15 @@
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>com.github.ijazfx</groupId>
-	<artifactId>api-proxy</artifactId>
+	<artifactId>testapi</artifactId>
 	<version>1.0.0-SNAPSHOT</version>
-	<name>API Proxy</name>
-	<description>A tool to configure URLs and Certificates and test API calls.</description>
+	<name>Test API</name>
+	<description>A tool to test API calls.</description>
 
 	<properties>
-		<version.graphenee>3.6.5</version.graphenee>
+		<version.graphenee>3.6.6</version.graphenee>
 	</properties>
 
 	<!-- Dependency Management -->
@@ -43,20 +45,23 @@
 			<artifactId>spring-boot-starter-data-jpa</artifactId>
 		</dependency>
 		<dependency>
-            <groupId>com.h2database</groupId>
-            <artifactId>h2</artifactId>
-            <scope>runtime</scope>
-        </dependency>
-        <!-- 
-		<dependency>
-			<groupId>org.postgresql</groupId>
-			<artifactId>postgresql</artifactId>
+			<groupId>com.h2database</groupId>
+			<artifactId>h2</artifactId>
 			<scope>runtime</scope>
 		</dependency>
-		-->
+		<!-- <dependency> <groupId>org.postgresql</groupId> <artifactId>postgresql</artifactId> 
+			<scope>runtime</scope> </dependency> -->
 		<dependency>
 			<groupId>io.graphenee</groupId>
 			<artifactId>gx-flow</artifactId>
+			<exclusions>
+				<exclusion>
+					<groupId>org.webjars.npm</groupId>
+					<artifactId>
+						vaadin__vaadin-mobile-drag-drop
+					</artifactId>
+				</exclusion>
+			</exclusions>
 		</dependency>
 		<dependency>
 			<groupId>io.graphenee</groupId>
@@ -147,17 +152,44 @@
 			<plugin>
 				<groupId>com.vaadin</groupId>
 				<artifactId>vaadin-maven-plugin</artifactId>
-				<version>14.4.3</version>
+				<version>14.10.3</version>
 				<executions>
 					<execution>
 						<goals>
 							<goal>prepare-frontend</goal>
-							<goal>build-frontend</goal>
 						</goals>
+						<phase>compile</phase>
 					</execution>
 				</executions>
 			</plugin>
 		</plugins>
 	</build>
+
+	<profiles>
+		<profile>
+			<!-- Production mode is activated using -Pproduction -->
+			<id>production</id>
+			<build>
+				<plugins>
+					<plugin>
+						<groupId>com.vaadin</groupId>
+						<artifactId>vaadin-maven-plugin</artifactId>
+						<version>14.10.3</version>
+						<executions>
+							<execution>
+								<goals>
+									<goal>build-frontend</goal>
+								</goals>
+								<phase>compile</phase>
+							</execution>
+						</executions>
+						<configuration>
+							<productionMode>true</productionMode>
+						</configuration>
+					</plugin>
+				</plugins>
+			</build>
+		</profile>
+	</profiles>
 
 </project>
