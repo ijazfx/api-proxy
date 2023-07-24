@@ -1,4 +1,4 @@
-package com.github.ijazfx.urlproxy.vaadin;
+package com.github.ijazfx.testapi.vaadin;
 
 import com.vaadin.flow.router.Route;
 

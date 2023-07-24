@@ -1,4 +1,4 @@
-package com.github.ijazfx.urlproxy.vaadin;
+package com.github.ijazfx.testapi.vaadin;
 
 import org.springframework.beans.factory.annotation.Autowired;
 

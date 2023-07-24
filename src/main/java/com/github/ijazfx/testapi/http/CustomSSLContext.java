@@ -1,4 +1,4 @@
-package com.github.ijazfx.urlproxy.http;
+package com.github.ijazfx.testapi.http;
 
 import java.io.IOException;
 import java.io.InputStream;

@@ -1,8 +1,8 @@
-package com.github.ijazfx.urlproxy.repo;
+package com.github.ijazfx.testapi.repo;
 
 import org.springframework.stereotype.Repository;
 
-import com.github.ijazfx.urlproxy.model.Url;
+import com.github.ijazfx.testapi.model.Url;
 
 import io.graphenee.core.model.jpa.GxJpaRepository;
 

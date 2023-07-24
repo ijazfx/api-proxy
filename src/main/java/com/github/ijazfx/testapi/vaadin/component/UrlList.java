@@ -1,4 +1,4 @@
-package com.github.ijazfx.urlproxy.vaadin.component;
+package com.github.ijazfx.testapi.vaadin.component;
 
 import java.io.File;
 import java.util.Collection;
@@ -9,8 +9,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Scope;
 import org.springframework.data.domain.Sort;
 
-import com.github.ijazfx.urlproxy.model.Url;
-import com.github.ijazfx.urlproxy.repo.UrlRepository;
+import com.github.ijazfx.testapi.model.Url;
+import com.github.ijazfx.testapi.repo.UrlRepository;
 import com.vaadin.flow.component.grid.Grid.Column;
 import com.vaadin.flow.spring.annotation.SpringComponent;
 

@@ -1,8 +1,8 @@
-package com.github.ijazfx.urlproxy.vaadin.component;
+package com.github.ijazfx.testapi.vaadin.component;
 
 import org.springframework.context.annotation.Scope;
 
-import com.github.ijazfx.urlproxy.model.Url;
+import com.github.ijazfx.testapi.model.Url;
 import com.vaadin.flow.component.HasComponents;
 import com.vaadin.flow.component.checkbox.Checkbox;
 import com.vaadin.flow.component.formlayout.FormLayout;

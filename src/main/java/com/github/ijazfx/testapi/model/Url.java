@@ -1,4 +1,4 @@
-package com.github.ijazfx.urlproxy.model;
+package com.github.ijazfx.testapi.model;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;

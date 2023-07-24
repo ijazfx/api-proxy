@@ -1,11 +1,11 @@
-package com.github.ijazfx.urlproxy.vaadin;
+package com.github.ijazfx.testapi.vaadin;
 
 import java.util.ArrayList;
 import java.util.List;
 
 import org.springframework.stereotype.Component;
 
-import com.github.ijazfx.urlproxy.vaadin.component.UrlView;
+import com.github.ijazfx.testapi.vaadin.component.UrlView;
 import com.vaadin.flow.component.html.Image;
 import com.vaadin.flow.component.icon.VaadinIcon;
 import com.vaadin.flow.router.RouterLayout;

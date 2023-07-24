@@ -1,4 +1,4 @@
-package com.github.ijazfx.urlproxy.http;
+package com.github.ijazfx.testapi.http;
 
 import java.io.IOException;
 import java.io.InputStream;
@@ -32,8 +32,8 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.github.ijazfx.urlproxy.model.Url;
-import com.github.ijazfx.urlproxy.repo.UrlRepository;
+import com.github.ijazfx.testapi.model.Url;
+import com.github.ijazfx.testapi.repo.UrlRepository;
 import com.google.common.base.Strings;
 
 import io.graphenee.util.storage.FileStorage;
