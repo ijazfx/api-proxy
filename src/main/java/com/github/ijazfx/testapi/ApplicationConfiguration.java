@@ -12,15 +12,15 @@ import io.graphenee.util.storage.FileStorage;
 import io.graphenee.util.storage.FileStorageFactory;
 
 @Configuration
-@EnableJpaRepositories(basePackages = { "com.github.ijazfx.urlproxy.repo" })
-@EntityScan(basePackages = { "com.github.ijazfx.urlproxy.model" })
-@ComponentScan(basePackages = { "com.github.ijazfx.urlproxy" })
+@EnableJpaRepositories(basePackages = { "com.github.ijazfx.testapi.repo" })
+@EntityScan(basePackages = { "com.github.ijazfx.testapi.model" })
+@ComponentScan(basePackages = { "com.github.ijazfx.testapi" })
 public class ApplicationConfiguration {
 
 	@Bean
 	FileStorage fileStorage() {
 		String homeFolder = System.getProperty("user.home");
-		File rootFolder = new File(homeFolder + File.separator + ".urlproxy");
+		File rootFolder = new File(homeFolder + File.separator + ".testapi");
 		FileStorage storage = FileStorageFactory.createLocalFileStorage(rootFolder);
 		return storage;
 	}

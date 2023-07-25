@@ -22,7 +22,7 @@ public class FlowSetup extends GxAbstractFlowSetup {
 
 	@Override
 	public String appTitle() {
-		return "API Proxy";
+		return "Test API";
 	}
 
 	@Override
